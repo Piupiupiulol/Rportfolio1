@@ -36,7 +36,7 @@ function Login(){
                         <input type={"text"} placeholder={"Username"} required={true} className={"input_login"} />
                         <br/>
                         <input type={"password"} placeholder={"Password"} required={true} className={"input_password"} />
-                        <div className={"login_button"} ><Button type={"submit"} variant="contained">Enter</Button></div>
+                        <div className={"login_button"} ><Button type={"submit"} variant="contained">enter</Button></div>
                         </form>
                     </div> }
 

@@ -8,7 +8,7 @@ function Login(){
     const highlightedButton2 = buttonChoice.second === true? "container_login_left_item_2_clicked" : "container_login_left_item_2";
     const highlightedButton3 = buttonChoice.third === true? "container_login_left_item_3_clicked" : "container_login_left_item_3";
 
-    function submitLogin(e){
+    function submitButtonChoice(e){
         e.preventDefault()
         if (e.target.classList.contains("container_login_left_item_1_clicked") || e.target.classList.contains("container_login_left_item_1")){
             setButtonChoice({first: true, second: false, third: false})
@@ -19,15 +19,19 @@ function Login(){
         }
     }
 
+    function submitLogin(e){
+        e.preventDefault()
+    }
+
     return(
 
         <Fragment>
             <div className={"background_login"}>
                 <div className={"container_login_grid"}>
                     <div className={"container_login_left"}>
-                        <div onClick={submitLogin} className={highlightedButton1}>Login</div>
-                        <div onClick={submitLogin} className={highlightedButton2}>Sing Up</div>
-                        <div onClick={submitLogin} className={highlightedButton3}>Reset</div>
+                        <div onClick={submitButtonChoice} className={highlightedButton1}>Login</div>
+                        <div onClick={submitButtonChoice} className={highlightedButton2}>Sing Up</div>
+                        <div onClick={submitButtonChoice} className={highlightedButton3}>Reset</div>
                     </div>
 
                     {buttonChoice.first && <div className={"container_login_right"}>
